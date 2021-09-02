@@ -1,8 +1,17 @@
 import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
+interface ContainerProps { //tipagem da propriedade available
+  available: boolean;
+}
+
+export const Container = styled.div<ContainerProps>`
+  width: 352px;
   background: #f0f0f5;
   border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   header {
     background: #ffb84d;
